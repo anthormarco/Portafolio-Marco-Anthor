@@ -1,0 +1,547 @@
+/* Variables */
+:root {
+    --primary-dark: #1a1a1a;
+    --secondary-dark: #2d2d2d;
+    --accent: #646cff;
+    --text-light: #ffffff;
+    --text-secondary: #a0a0a0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+}
+
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    width: 400px;
+    height: 4 00px;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 30px rgba(100, 108, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(100, 108, 255, 0.5);
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--primary-dark);
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: var(--secondary-dark);
+}
+
+
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(100, 108, 255, 0.2);
+}
+
+.skill-icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(100, 108, 255, 0.3);
+    border-color: var(--accent);
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: var(--primary-dark);
+}
+
+.project-card {
+    background-color: var(--secondary-dark) !important;
+    border: 1px solid rgba(100, 108, 255, 0.2);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(100, 108, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.project-card h5 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    line-height: 1.6;
+}
+
+.project-card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    margin-top: auto;
+}
+
+.project-card a:hover {
+    color: var(--text-light);
+}
+
+#imagen-proyecto2 {
+    background-image: url('images/Screenshot\ 2026-08-29\ 222930.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+#imagen-proyecto1 {
+    background-image: url('images/keso.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--secondary-dark);
+    text-align: center;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--secondary-dark) !important;
+
+}
+
+.secciones {
+    text-decoration: none;
+    padding-right: 50px;
+}
+
+a:hover {
+    transform: scale(1.05);
+
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Buttons */
+.btn-outline-light {
+    border-color: var(--accent);
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--primary-dark);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 108, 255, 0.8);
+}
+
+/* Responsive */
+/* ==== TABLET 768px - 991px ======================================== */
+@media (max-width: 991.98px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .navbar .container-fluid {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar .d-flex {
+        gap: 15px !important;
+    }
+
+    /* HERO */
+    .hero-section {
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .profile-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    /* SKILLS */
+    .skills-icons {
+        gap: 25px;
+    }
+
+    .skill-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    /* PROJECTS */
+    .project-image {
+        height: 200px;
+    }
+}
+
+/* ==== TELÉFONO Menos de 768px = */
+@media(max-width: 767.98px) {
+
+    /* NAVBAR */
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .navbar .container-fluid {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .navbar .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .navbar .d-flex {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 15px !important;
+    }
+
+    secciones {
+        font-size: 0.85rem;
+    }
+
+    /* HERO */
+    .hero-section {
+        min-height: auto;
+        text-align: center;
+        padding: 70px 20px !important;
+    }
+
+    .hero-section .row {
+        flex-direction: column-reverse;
+    }
+
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+        margin-top: 30px;
+    }
+
+    .hero-section .lead {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .hero-section .btn {
+        margin-bottom: 10px;
+    }
+
+    /* ABOUT */
+    .about-section {
+        padding: 60px 20px !important;
+    }
+
+    .about-section h2 {
+        text-align: center;
+    }
+
+    .about-section p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+    /* SKILLS */
+    .skills-section {
+        padding: 60px 20px !important;
+    }
+
+    .skills-section h2 {
+        text-align: center;
+    }
+
+    .skills-section .row {
+        text-align: center;
+    }
+
+    .skills-section .col-md-6 {
+        margin-bottom: 25px;
+    }
+
+    .skills-icons {
+        gap: 20px;
+    }
+
+    .skill-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* PROJECTS */
+    .projects-section {
+        padding: 60px 20px !important;
+    }
+
+    .projects-section h2 {
+        font-size: 2rem;
+    }
+
+    .project-image {
+        height: 190px;
+    }
+
+    .project-card .p-4 {
+        padding: 20px !important;
+    }
+
+    .project-card h5 {
+        font-size: 1.2rem;
+    }
+
+    .project-card p {
+        font-size: 0.9rem;
+    }
+
+    /* CONTACT */
+    .contact-section {
+        padding: 60px 20px !important;
+    }
+
+    .contact-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+
+    /* FOOTER */
+    footer {
+        margin-top: 0 !important;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ==== TELÉFONOS PEQUEÑOS Menos de 400px ======= */
+@media (max-width: 400px) {
+    .secciones {
+        font-size: 0.75rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .skills-icons {
+        gap: 15px;
+    }
+
+    .skill-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .contact-section .d-flex {
+        gap: 20px !important;
+    }
+}
+
+/* =========================================
+   NAVBAR RESPONSIVE
+========================================= */
+
+.navbar-toggler {
+    border-color: var(--accent);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(100, 108, 255, 0.25);
+}
+
+
+/* PC */
+
+@media (min-width: 992px) {
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .secciones {
+        padding: 0 !important;
+    }
+}
+
+
+/* TABLET Y TELÉFONO */
+
+@media (max-width: 991.98px) {
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .navbar .container-fluid {
+        flex-wrap: wrap;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .secciones {
+        padding: 12px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .secciones:hover {
+        background-color: rgba(100, 108, 255, 0.1);
+        color: var(--accent) !important;
+    }
+
+}
+
+
+/* TELÉFONO */
+
+@media (max-width: 576px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar>.container-fluid>.btn {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .navbar-toggler {
+        padding: 6px 9px;
+    }
+
+}

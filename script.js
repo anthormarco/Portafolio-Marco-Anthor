@@ -167,3 +167,14 @@ if (contactSection) {
     contactSection.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
   });
 }
+
+
+document.querySelectorAll('.hero-section, .about-section, .skills-section, .projects-section, .contact-section').forEach(section => {
+  section.addEventListener('mousemove', (e) => {
+    const rect = section.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    section.style.setProperty('--mouse-x', `${x}%`);
+    section.style.setProperty('--mouse-y', `${y}%`);
+  });
+});

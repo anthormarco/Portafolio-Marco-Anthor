@@ -36,7 +36,7 @@ html{scroll-behavior:smooth} body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,s
 /* ABOUT */
 .about-section{position:relative; background:radial-gradient(600px circle at var(--mouse-x,50%) var(--mouse-y,50%), rgba(255,255,255,0.04), transparent 40%), #0f0f0f; overflow:hidden; isolation:isolate; padding:110px 0 !important; border-bottom:1px solid rgba(255,255,255,0.05); --mouse-x:50%; --mouse-y:50%}
 .about-section::before{content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size:40px 40px; pointer-events:none; z-index:0}
-.about-section::after{content:"ABOUT"; position:absolute; top:50%; left:5%; transform:translateY(-50%); font-size:14rem; font-weight:900; letter-spacing:-10px; color:rgba(255,255,255,0.02); line-height:1; pointer-events:none; z-index:0}
+.about-section::after{content:""; position:absolute; top:50%; left:5%; transform:translateY(-50%); font-size:14rem; font-weight:900; letter-spacing:-10px; color:rgba(255,255,255,0.02); line-height:1; pointer-events:none; z-index:0}
 .about-section>*{position:relative; z-index:1} .about-section p{font-size:1.1rem; line-height:1.95; color:#888; max-width:820px; margin-top:16px} .about-section p strong{color:#e0e0e0; font-weight:600; background:linear-gradient(90deg,#ffffff,#aaaaaa); -webkit-background-clip:text; -webkit-text-fill-color:transparent}
 
 /* SKILLS */

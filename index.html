@@ -17,7 +17,7 @@
         <div class="container-fluid">
 
             <!-- Botón Descargar CV -->
-            <a href="archivos/Marco Antonio Anthor Robles.png" download="CV-Marco-Antonio-Anthor-Robles.png"
+            <a href="archivos/Marco Antonio Anthor Robles (1).pdf" download="CV-Marco-Antonio-Anthor-Robles.pdf"
                 class="btn btn-outline-light">
                 Descargar CV
             </a>
@@ -55,7 +55,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h1 class="display-4 fw-bold mb-3">MARCO ANTHOR</h1>
+                    <h1 class="display-4 fw-bold mb-3 ">MARCO ANTHOR</h1>
                     <p class="lead text-secondary">Ingeniero en Tecnoligías de la Información y Desarrollador web Java
                         full-stack con experiencia en desarrollo, diseño e implementación de aplicaciones modernas.
                         Apasionado por crear soluciones innovadoras y funcionales.</p>
@@ -77,49 +77,53 @@
     </section>
 
     <!-- Sobre mi -->
-    <section class="about-section py-5 border-top border-secondary" id="about">
+    <section id="about" class="about-section py-5">
         <div class="container">
-            <h2 class="mb-4">Sobre mi</h2>
-            <p class="text-secondary">
-                Hola, soy Marco Antonio Anthor Robles, Ingeniero en Tecnologías de la Información y Desarrollador Web
-                Java Full-Stack. Me especializo en el diseño y desarrollo e implementación de aplicaciones web modernas,
-                funcionales y escalables. Me apasiona crear soluciones innovadoras, resolver problemas mediante la
-                tecnología y continuar aprendiendo nuevas herramientas y tecnologías.
-
-            </p>
+            <h2 class="mb-4">Sobre mí</h2>
+            <div class="about-card">
+                <p>
+                    Hola, soy <strong>Marco Antonio Anthor Robles</strong>, Ingeniero en Tecnologías de la Información y
+                    Desarrollador Web Java Full-Stack. Me especializo en el diseño y desarrollo e implementación de
+                    aplicaciones web modernas, funcionales y escalables. Me apasiona crear soluciones innovadoras,
+                    resolver problemas mediante la tecnología y continuar aprendiendo nuevas herramientas y tecnologías.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- tecnologias -->
-    <section class="skills-section py-5 border-top border-secondary img-fondo" id="skills">
+    <section class="skills-section py-5 border-top border-secondary" id="skills">
         <div class="container">
             <h2 class="mb-5">Tecnologías</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h5 class="mb-3">Frontend</h5>
+                    <h5>Frontend</h5>
                     <p class="text-secondary">HTML, CSS, JavaScript, Bootstrap</p>
                 </div>
                 <div class="col-md-6">
-                    <h5 class="mb-3">Backend</h5>
+                    <h5>Backend</h5>
                     <p class="text-secondary">Java, Spring Boot, Node.js, Express, Python, SQL, MySQL, GitHub, AWS</p>
                 </div>
             </div>
-            <div class="skills-icons mt-5">
-                <img src="images/html5.png" alt="HTML" class="skill-icon">
-                <img src="images/css-3 (1).png" alt="CSS" class="skill-icon">
-                <img src="images/archivo-js (1).png" alt="JavaScript" class="skill-icon">
-                <img src="images/letra-b.png" alt="Bootstrap" class="skill-icon">
 
-                <img src="images/nodo-js.png" alt="Node.js" class="skill-icon">
-
-                <img src="images/piton (1).png" alt="Python" class="skill-icon">
-                <img src="images/java.png" alt="Java" class="skill-icon">
-                <img src="images/hoja (1).png" alt="SpringBoot" class="skill-icon">
-                <img src="images/codigo.png" alt="Git" class="skill-icon">
-                <img src="images/social.png" alt="AWS" class="skill-icon">
-                <img src="images/servidor-sql.png" alt="SQL" class="skill-icon">
-                <img src="images/base-de-datos.png" alt="MySQL" class="skill-icon">
+            <!-- AGREGA ESTE WRAPPER -->
+            <div class="skills-wrapper mt-5">
+                <div class="skills-icons">
+                    <img src="images/html5.png" class="skill-icon neon" style="--c:#E34F26" alt="HTML">
+                    <img src="images/css-3 (1).png" class="skill-icon neon" style="--c:#1572B6" alt="CSS">
+                    <img src="images/archivo-js (1).png" class="skill-icon neon" style="--c:#F7DF1E" alt="JS">
+                    <img src="images/letra-b.png" class="skill-icon neon" style="--c:#7952B3" alt="Bootstrap">
+                    <img src="images/nodo-js.png" class="skill-icon neon" style="--c:#68A063" alt="Node">
+                    <img src="images/piton (1).png" class="skill-icon neon" style="--c:#3776AB" alt="Python">
+                    <img src="images/java.png" class="skill-icon neon" style="--c:#ED8B00" alt="Java">
+                    <img src="images/hoja (1).png" class="skill-icon neon" style="--c:#6DB33F" alt="Spring">
+                    <img src="images/codigo.png" class="skill-icon neon" style="--c:#F05032" alt="Git">
+                    <img src="images/social.png" class="skill-icon neon" style="--c:#FF9900" alt="AWS">
+                    <img src="images/servidor-sql.png" class="skill-icon neon" style="--c:#0064A5" alt="SQL">
+                    <img src="images/base-de-datos.png" class="skill-icon neon" style="--c:#00758F" alt="MySQL">
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -198,9 +202,9 @@
     <!-- Contacto -->
     <section class="contact-section py-5 border-top border-secondary" id="contact">
         <div class="container">
-            <h2 class="mb-5">Contacto</h2>
+            <h2 class="mb-5 ">Contacto</h2>
             <div class="d-flex gap-4 justify-content-center">
-                <a href="mailto:anthormarco@gmail.com" class="contact-icon">
+                <a href="mailto:anthormarco@gmail.com" class="contact-icon ">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/marco-antonio-anthor-robles" class="contact-icon">
@@ -214,9 +218,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark border-top border-secondary py-4 mt-5">
-        <div class="container text-center text-secondary">
-            <p>2026 Marco Anthor. Todos los derechos reservados.</p>
+    <footer class="footer-section py-4">
+        <div class="container text-center">
+            <div class="footer-line"></div>
+            <p class="mb-0">2026 <span>Marco Anthor</span>. Todos los derechos reservados.</p>
         </div>
     </footer>
 

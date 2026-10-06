@@ -1,4 +1,3 @@
-/* ===== CSS COMPLETO ===== */
 :root {
     --primary-dark: #0f0f0f;
     --secondary-dark: #1e1e22;
@@ -6,6 +5,28 @@
     --accent-2: #a0a0a0;
     --text-light: #ffffff;
     --text-secondary: #888888;
+}
+
+
+html {
+    cursor: url('images/linterna-32.png') 16 0, auto;
+}
+body, 
+.secciones, 
+.skill-icon, 
+.contact-icon, 
+.project-card,
+a, 
+button {
+    cursor: url('images/linterna-32.png') 16 0, auto !important;
+}
+a:hover, 
+button:hover, 
+.secciones:hover, 
+.project-card:hover,
+.skill-icon:hover,
+.contact-icon:hover {
+    cursor: url('images/linterna-48.png') 16 0, pointer !important;
 }
 
 @property --angle {

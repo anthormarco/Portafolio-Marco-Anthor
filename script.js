@@ -1,4 +1,23 @@
-// Script.js - Portafolio con Navbar Glass + Auto-Scroll
+
+const lampCursor = document.getElementById('lamp-cursor');
+let mouseX = 0, mouseY = 0;
+
+if (lampCursor) {
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    lampCursor.style.left = mouseX + 'px';
+    lampCursor.style.top = mouseY + 'px';
+  }, { passive: true });
+
+  document.addEventListener('mousedown', () => lampCursor.classList.add('clicking'));
+  document.addEventListener('mouseup', () => lampCursor.classList.remove('clicking'));
+
+  document.querySelectorAll('.secciones,.skill-icon,.contact-icon,.project-card, a, button,.profile-image').forEach(el => {
+    el.addEventListener('mouseenter', () => lampCursor.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => lampCursor.classList.remove('hovering'));
+  });
+}
 
 // Smooth scroll con active link
 const sections = document.querySelectorAll('section[id]');
@@ -12,7 +31,6 @@ function setActiveLink() {
             current = section.getAttribute('id');
         }
     });
-
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -20,7 +38,6 @@ function setActiveLink() {
         }
     });
 }
-
 window.addEventListener('scroll', setActiveLink, { passive: true });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -57,24 +74,13 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
-
-document.querySelectorAll('.project-card, .contact-icon').forEach(el => observer.observe(el));
+document.querySelectorAll('.project-card,.contact-icon').forEach(el => observer.observe(el));
 
 // Skills - Auto scroll infinito + drag + spotlight + tilt
 const skillsSection = document.querySelector('.skills-section');
 const skillsIcons = document.querySelector('.skills-icons');
 
 if (skillsSection && skillsIcons) {
-    skillsSection.addEventListener('mousemove', e => {
-        const rect = skillsSection.getBoundingClientRect();
-        skillsSection.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-        skillsSection.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-    });
-    skillsSection.addEventListener('mouseleave', () => {
-        skillsSection.style.setProperty('--mouse-x', `50%`);
-        skillsSection.style.setProperty('--mouse-y', `50%`);
-    });
-
     // Duplicar para loop infinito
     if (skillsIcons.children.length > 0 && skillsIcons.children.length < 24) {
         const icons = Array.from(skillsIcons.children);
@@ -155,21 +161,13 @@ localStorage.setItem('portfolioVisits', (parseInt(localStorage.getItem('portfoli
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
-    .animate-in { animation: fadeIn 0.6s ease-out forwards !important; }
-    .project-card, .contact-icon { opacity:0; }
+   .animate-in { animation: fadeIn 0.6s ease-out forwards!important; }
+   .project-card,.contact-icon { opacity:0; }
 `;
 document.head.appendChild(style);
-const contactSection = document.querySelector('.contact-section');
-if (contactSection) {
-  contactSection.addEventListener('mousemove', e => {
-    const rect = contactSection.getBoundingClientRect();
-    contactSection.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-    contactSection.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-  });
-}
 
 
-document.querySelectorAll('.hero-section, .about-section, .skills-section, .projects-section, .contact-section').forEach(section => {
+document.querySelectorAll('.hero-section,.about-section,.skills-section,.projects-section,.contact-section').forEach(section => {
   section.addEventListener('mousemove', (e) => {
     const rect = section.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
